@@ -1,0 +1,98 @@
+{
+  "name": "template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview --host",
+    "prepare": "husky install",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "styles:check": "stylelint \"**/*.{css,scss}\"",
+    "styles:fix-all": "stylelint \"**/*.{css,scss}\" --cache --fix",
+    "styles:fix": "stylelint --fix",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "copy-env-dev-ar": "node scripts/copyEnv.js dev-ar",
+    "copy-env-dev-br": "node scripts/copyEnv.js dev-br",
+    "copy-env-prd-ar": "node scripts/copyEnv.js prd-ar",
+    "copy-env-prd-br": "node scripts/copyEnv.js prd-br",
+    "dev:run-dev-ar": "pnpm copy-env-dev-ar && vite",
+    "dev:run-dev-br": "pnpm copy-env-dev-br && vite",
+    "dev:run-prd-ar": "pnpm copy-env-prd-ar && vite",
+    "dev:run-prd-br": "pnpm copy-env-prd-br && vite",
+    "build:run-dev-ar": "pnpm copy-env-dev-ar && pnpm build",
+    "build:run-dev-br": "pnpm copy-env-dev-br && pnpm build",
+    "build:run-prd-ar": "pnpm copy-env-prd-ar && pnpm build",
+    "build:run-prd-br": "pnpm copy-env-prd-br && pnpm build"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.40.1",
+    "@tanstack/react-query-devtools": "^5.40.1",
+    "@types/js-cookie": "^3.0.6",
+    "autoprefixer": "^10.4.19",
+    "classnames": "^2.5.1",
+    "i18next": "^23.11.5",
+    "i18next-http-backend": "^2.5.2",
+    "js-cookie": "^3.0.5",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^14.1.2",
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@tanstack/eslint-plugin-query": "^5.35.6",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.3.0",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12",
+    "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ],
+    "*.{tsx,ts}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

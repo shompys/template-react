@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Raleway;
+  font-weight: 400;
+  font-display: swap;
+src:
+    url("/fonts/Raleway-Regular.woff2") format("woff2"),
+    url("/fonts/Raleway-Regular.woff") format("woff"),
+    url("/fonts/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("/fonts/Raleway-Medium.woff2") format("woff2"),
+    url("/fonts/Raleway-Medium.woff") format("woff"),
+    url("/fonts/Raleway-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Raleway;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/fonts/Raleway-Bold.woff2") format("woff2"),
+    url("/fonts/Raleway-Bold.woff") format("woff"),
+    url("/fonts/Raleway-Bold.ttf") format("truetype");
+}
+
+* {
+    font-feature-settings:
+        "pnum" on,
+        "lnum" on;
+}
+
+html {
+    font-family: Raleway, ui-sans-serif, system-ui, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+    font-weight: 500;
+    color: rgb(var(--gray-1000));
+    color-scheme: dark;
+    background-color: Canvas;
+}
+
+@layer base {
+  :root {
+    /* blue */
+    --blue-100: 246, 247, 255; /* rgb(246, 247, 255) */
+    --blue-150: 237, 238, 255; /* rgb(237, 238, 255)  */
+    --blue-250: 213, 219, 251; /* rgb(213, 219, 251)  */
+    --blue-350: 193, 202, 253; /* rgb(193, 202, 253)  */
+    --blue-500: 180, 190, 245; /* rgb(180, 190, 245)  */
+    --blue-600: 148, 164, 255; /* rgb(148, 164, 255)  */
+    --blue-700: 113, 134, 250; /* rgb(113, 134, 250)  */
+    --blue-800: 86, 109, 237; /* rgb(86, 109, 237)  */
+    --blue-900: 39, 61, 186; /* rgb(39, 61, 186)  */
+    --blue-1000: 6, 24, 123; /* rgb(6, 24, 123)  */
+
+    /* gray */
+    --gray-100: 242, 243, 248; /* rgb(242, 243, 248)  */
+    --gray-200: 235, 236, 245; /* rgb(235, 236, 245)  */
+    --gray-350: 227, 229, 237; /* rgb(227, 229, 237)  */
+    --gray-400: 216, 218, 227; /* rgb(216, 218, 227)  */
+    --gray-500: 202, 204, 217; /* rgb(202, 204, 217)  */
+    --gray-600: 175, 177, 188; /* rgb(175, 177, 188)  */
+    --gray-700: 135, 137, 156; /* rgb(135, 137, 156)  */
+    --gray-800: 95, 100, 122; /* rgb(95, 100, 122)  */
+    --gray-900: 47, 54, 91; /* rgb(47, 54, 91 )  */
+    --gray-1000: 27, 33, 65; /* rgb(27, 33, 65 )  */
+
+    /* orange */
+    --orange-100: 255, 243, 240; /* rgb(255, 243, 240)  */
+    --orange-200: 255, 231, 223; /* rgb(255, 231, 223)  */
+    --orange-300: 255, 216, 204; /* rgb(255, 216, 204)  */
+    --orange-400: 255, 201, 184 ; /* rgb(255, 201, 184 )  */
+    --orange-500: 255, 185, 163; /* rgb(255, 185, 163)  */
+    --orange-600: 255, 144, 108; /* rgb(255, 144, 108)  */
+    --orange-700: 255, 112, 66; /* rgb(255, 112, 66 )  */
+    --orange-800: 235, 77, 27; /* rgb(235, 77, 27)  */
+    --orange-900: 201, 49, 0; /* rgb(201, 49, 0)  */
+
+    /* --orange-1000: ""; */
+
+    /* green */
+    --green-100: 227, 252, 240; /* rgb(227, 252, 240)  */
+    --green-200: 214, 250, 233; /* rgb(214, 250, 233)  */
+    --green-300: 201, 249, 226; /* rgb(201, 249, 226)  */
+    --green-500: 154, 249, 203; /* rgb(154, 249, 203)  */
+    --green-600: 108, 239, 176; /* rgb(108, 239, 176)  */
+    --green-700: 71, 235, 156; /* rgb(71, 235, 156)  */
+    --green-800: 38, 220, 133; /* rgb(38, 220, 133 )  */
+    --green-900: 5, 192, 102; /* rgb(5, 192, 102)  */
+    --green-950: 7, 156, 84; /* rgb(7, 156, 84 )  */
+    --green-1000: 15, 102, 60; /* rgb(15, 102, 60)  */
+
+    /* yellow */
+    --yellow-200: 255, 245, 219; /* rgb(255, 245, 219)  */
+    --yellow-300: 255, 239, 199; /* rgb(255, 239, 199 )  */
+    --yellow-400: 255, 234, 179; /* rgb(255, 234, 179)  */
+    --yellow-500: 255, 229, 160; /* rgb(255, 229, 160)  */
+    --yellow-600: 255, 220, 128; /* rgb(255, 220, 128)  */
+    --yellow-700: 255, 210, 92; /* rgb(255, 210, 92)  */
+    --yellow-800: 255, 194, 38; /* rgb(255, 194, 38)  */
+    --yellow-900: 239, 172, 1; /* rgb(239, 172, 1)  */
+    --yellow-950: 219, 159, 7; /* rgb(219, 159, 7)  */
+    --yellow-1000: 105, 79, 13; /* rgb(105, 79, 13 )  */
+
+    /* red */
+    --red-100: 255, 237, 237; /* rgb(255, 237, 237 )  */
+    --red-200: 255, 215, 215; /* rgb(255, 215, 215)  */
+    --red-300: 251, 191, 191; /* rgb(251, 191, 191)  */
+    --red-400: 249, 164, 164; /* rgb(249, 164, 164)  */
+    --red-500: 249, 139, 139; /* rgb(249, 139, 139 )  */
+    --red-600: 249, 113, 113; /* rgb(249, 113, 113)  */
+    --red-700: 250, 92, 92; /* rgb(250, 92, 92)  */
+    --red-800: 241, 40, 40; /* rgb(241, 40, 40)  */
+    --red-900: 177, 11, 11; /* rgb(177, 11, 11 )  */
+    --red-1000: 88, 13, 13; /* rgb(88, 13, 13 )  */
+  }
+}

@@ -1,0 +1,10 @@
+node_modules
+.gitignore
+.vscode
+Dockerfile
+dist
+README.md
+.DS_Store
+.github
+.npmrc
+.env
