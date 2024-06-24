@@ -1,8 +1,18 @@
 {
-  "name": "template",
-  "private": true,
-  "version": "0.0.0",
+  "name": "shompys-template-react",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "keywords": ["react", "vite", "template", "shompys"],
+  "license": "MIT",
+  "homepage": "https://github.com/shompys/template-react",
+  "repository": {
+    "url": "https://github.com/shompys/template-react",
+    "type": "git"
+  },
+  "release": {
+    "branches": ["main"]
+  },
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --host",
