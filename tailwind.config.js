@@ -9,12 +9,10 @@ export default {
             xxs: `${Screens.XXS}px`,
             xs: `${Screens.XS}px`,
             s: `${Screens.S}px`,
-            "karvi-s": `${Screens.KARVI_S}px`,
             sm: `${Screens.SM}px`,
             md: `${Screens.MD}px`,
             lg: `${Screens.LG}px`,
             xl: `${Screens.XL}px`,
-            "karvi-xl": `${Screens.KARVI_XL}px`,
         },
         extend: {
             colors: {

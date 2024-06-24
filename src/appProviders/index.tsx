@@ -2,8 +2,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 
-import { ModalProvider } from "@/providers/ModalManagerProvider/ModalManagerProvider";
-import WindowSizeProvider from "@/providers/WindowSizeProvider";
+import { ModalProvider } from "@/appProviders/ModalManagerProvider/ModalManagerProvider";
+import WindowSizeProvider from "@/appProviders/WindowSizeProvider";
 type AppProvidersProps = {
     children: React.ReactNode;
 };

@@ -4,9 +4,8 @@ import { Helmet } from "react-helmet";
 import styles from "./app.module.scss";
 
 import { HelloWorld } from "@/components/HelloWorld";
-import { pushGTMCustomEvent, pushGTMEvent } from "@/services/gtmEvents";
-import { useModalManager } from "@/providers/ModalManagerProvider/ModalManagerProvider";
-import { modalIds } from "@/providers/ModalManagerProvider/modals";
+import { useModalManager } from "@/appProviders/ModalManagerProvider/ModalManagerProvider";
+import { modalIds } from "@/appProviders/ModalManagerProvider/modals";
 
 export const Home = () => {
     const { showModal } = useModalManager();
@@ -23,21 +22,7 @@ export const Home = () => {
                     styles.button,
                 )}
                 onClick={() => {
-                    pushGTMEvent({
-                        event_name: "name_test",
-                        event_action: "action_test",
-                        event_category: "category_test",
-                    });
-                    pushGTMCustomEvent({
-                        event_name: "name_test",
-                        params: {
-                            flow: "template flow",
-                            element: "element",
-                            index: 1,
-                            list_name: "list_name_template",
-                            zaraza: "zaraza_prop",
-                        },
-                    });
+                    console.log("button");
                 }}
             >
                 GTM test

@@ -68,7 +68,7 @@ function useWindowSize() {
     const isMobile = parsedWidth < Screens.MD;
     const isTablet = parsedWidth >= Screens.MD && parsedWidth < Screens.LG;
     const isDesktop = parsedWidth >= Screens.LG;
-    const isWideDesktop = parsedWidth >= Screens.KARVI_XL;
+    const isWideDesktop = true; // pending config
 
     const isMobileXxs = parsedWidth < Screens.XXS;
     const isMobileSm = parsedWidth < Screens.SM;

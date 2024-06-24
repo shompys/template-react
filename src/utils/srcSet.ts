@@ -4,12 +4,10 @@ const screen = {
     xxs: Screens.XXS,
     xs: Screens.XS,
     s: Screens.S,
-    karviS: Screens.KARVI_S,
     sm: Screens.SM,
     md: Screens.MD,
     lg: Screens.LG,
     xl: Screens.XL,
-    karviXL: Screens.KARVI_XL,
 };
 
 type CreateSourceSet = {
