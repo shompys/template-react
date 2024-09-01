@@ -1,14 +1,21 @@
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Suspense } from "react";
 
-import { AppProviders } from "@/appProviders";
 import { Home } from "@/pages/home";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+        errorElement: "404",
+        children: [],
+    },
+]);
 
 export const AppRouter = () => {
     return (
-        <AppProviders>
-            <Routes>
-                <Route element={<Home />} path="/" />
-            </Routes>
-        </AppProviders>
+        <Suspense fallback="...loading">
+            <RouterProvider router={router} />
+        </Suspense>
     );
 };
