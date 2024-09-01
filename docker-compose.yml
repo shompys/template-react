@@ -4,5 +4,7 @@ services:
     container_name: "template"
     build:
       context: .
+      args:
+        - ENVS=dev-ar
     ports:
       - "8080:8080"

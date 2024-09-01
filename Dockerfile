@@ -1,5 +1,5 @@
 FROM node:20.12.0-alpine3.19 as base
-RUN npm install -g pnpm
+RUN npm install -g pnpm@9.7.1
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
